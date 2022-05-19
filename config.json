@@ -1,0 +1,14 @@
+{
+    "privateKeyPath": "C:/Users/someone/.ssh/id_rsa",
+    "passphrase": "",
+    "user": "root",
+    "port": "22222",
+    "hostList": [
+        "127.0.0.1"
+    ],
+    "runCommands": [
+        "docker stop service && docker rm service",
+        "docker run --network=\"host\" -d --restart always --name=\"service\" service:v1",
+        "docker ps"
+    ]
+}
